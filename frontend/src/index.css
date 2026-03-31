@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Noto+Sans+Hebrew:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #1e3a5f;
+  --color-primary-light: #2c5282;
+  --color-primary-dark: #152a45;
+  --color-accent: #d4af37;
+  --color-accent-light: #e5c453;
+  --color-surface: #f8f9fa;
+  --color-surface-dark: #e9ecef;
+  --color-gold: #d4af37;
+  --color-gold-light: #e5c453;
+  --color-gold-dark: #b8952e;
+  --color-bark: #080808;
+  --color-bark-light: #111111;
+  --color-bark-surface: #161616;
+  --font-display: 'Frank Ruhl Libre', 'David Libre', serif;
+  --font-body: 'Noto Sans Hebrew', 'Segoe UI', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  background: #030303;
+}
+
+input, textarea, select {
+  direction: rtl;
+}
+
+/* Animations — snappy, precise */
+@keyframes booking-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes booking-scale-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes gold-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes check-draw {
+  from { stroke-dashoffset: 48; }
+  to { stroke-dashoffset: 0; }
+}
+.booking-animate-in {
+  animation: booking-fade-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.booking-scale-in {
+  animation: booking-scale-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.gold-shimmer-text {
+  background: linear-gradient(90deg, var(--color-gold-dark) 0%, var(--color-gold-light) 40%, var(--color-gold) 60%, var(--color-gold-dark) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 5s linear infinite;
+}

@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+model Appointment {
+  id           String            @id @default(uuid())
+  customerName String            @map("customer_name")
+  phone        String
+  date         DateTime          @db.Date
+  startTime    String            @map("start_time") // HH:mm format
+  endTime      String            @map("end_time")   // HH:mm format
+  notes        String?
+  status       AppointmentStatus @default(SCHEDULED)
+  createdAt    DateTime          @default(now()) @map("created_at")
+  updatedAt    DateTime          @updatedAt @map("updated_at")
+
+  @@unique([date, startTime])
+  @@index([date])
+  @@map("appointments")
+}
+
+model BusinessSettings {
+  id             String   @id @default(uuid())
+  openTime       String   @default("09:00") @map("open_time")   // HH:mm
+  closeTime      String   @default("20:00") @map("close_time")  // HH:mm
+  slotDuration   Int      @default(30) @map("slot_duration")     // minutes
+  workingDays    Int[]    @default([0, 1, 2, 3, 4]) @map("working_days") // 0=Sunday
+  breakStartTime String?  @map("break_start_time")
+  breakEndTime   String?  @map("break_end_time")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("business_settings")
+}
+
+model BlockedSlot {
+  id        String   @id @default(uuid())
+  date      DateTime @db.Date
+  startTime String   @map("start_time")
+  endTime   String   @map("end_time")
+  reason    String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("blocked_slots")
+}
+
+enum Role {
+  ADMIN
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
