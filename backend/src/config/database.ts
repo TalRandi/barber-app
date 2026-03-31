@@ -1,6 +1,5 @@
 import { PrismaClient } from "@prisma/client";
 import { PrismaNeon } from "@prisma/adapter-neon";
-import { Pool } from "@neondatabase/serverless";
 
 let prisma: PrismaClient;
 
@@ -10,8 +9,8 @@ function getPrisma(): PrismaClient {
     if (!connectionString) {
       throw new Error("DATABASE_URL environment variable is not set");
     }
-    const pool = new Pool({ connectionString });
-    const adapter = new PrismaNeon(pool);
+    console.log("[DB] Initializing Prisma with Neon adapter");
+    const adapter = new PrismaNeon({ connectionString });
     prisma = new PrismaClient({
       adapter,
       log: process.env.NODE_ENV === "development" ? ["query", "error", "warn"] : ["error"],
