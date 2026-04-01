@@ -104,9 +104,9 @@ export function BookingPage() {
         style={{ background: '#030303' }}>
         <div className="booking-scale-in max-w-md w-full text-center">
           {/* Animated check circle */}
-          <div className="mx-auto mb-8 w-20 h-20 rounded-full border-2 border-gold/40 flex items-center justify-center"
+          <div className="mx-auto mb-6 sm:mb-8 w-16 sm:w-20 h-16 sm:h-20 rounded-full border-2 border-gold/40 flex items-center justify-center"
             style={{ animation: 'booking-scale-in 0.4s cubic-bezier(0.16,1,0.3,1) 0.15s both' }}>
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" className="sm:w-12 sm:h-12">
               <path
                 d="M12 24L20 32L36 16"
                 stroke="#d4af37"
@@ -119,27 +119,27 @@ export function BookingPage() {
             </svg>
           </div>
 
-          <h2 className="text-3xl font-bold mb-2 gold-shimmer-text" style={{ fontFamily: 'var(--font-display)' }}>
+          <h2 className="text-xl sm:text-3xl font-bold mb-2 gold-shimmer-text" style={{ fontFamily: 'var(--font-display)' }}>
             התור נקבע בהצלחה
           </h2>
-          <p className="text-white/40 text-sm mb-8" style={{ fontFamily: 'var(--font-body)' }}>מחכים לך</p>
+          <p className="text-white/40 text-xs sm:text-sm mb-6 sm:mb-8" style={{ fontFamily: 'var(--font-body)' }}>מחכים לך</p>
 
           {/* Appointment card */}
-          <div className="rounded-lg p-6 mb-8 text-right border border-gold/10"
+          <div className="rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 text-right border border-gold/10"
             style={{
               background: '#0a0a0a',
               animation: 'booking-fade-up 0.35s cubic-bezier(0.16,1,0.3,1) 0.3s both',
             }}>
-            <div className="space-y-3" style={{ fontFamily: 'var(--font-body)' }}>
+            <div className="space-y-2 sm:space-y-3" style={{ fontFamily: 'var(--font-body)' }}>
               {[
                 { label: 'שם', value: form.customerName },
                 { label: 'תאריך', value: `${getDayName(new Date(form.date + 'T00:00:00'))}, ${form.date.split('-').reverse().join('/')}` },
                 { label: 'שעה', value: bookedTime },
                 { label: 'טלפון', value: form.phone, dir: 'ltr' },
               ].map((row, i) => (
-                <div key={i} className="flex justify-between items-center py-2 border-b border-white/5 last:border-0">
-                  <span className="text-white/40 text-sm">{row.label}</span>
-                  <span className="text-white font-medium" dir={row.dir}>{row.value}</span>
+                <div key={i} className="flex justify-between items-center py-1.5 sm:py-2 border-b border-white/5 last:border-0">
+                  <span className="text-white/40 text-xs sm:text-sm">{row.label}</span>
+                  <span className="text-white font-medium text-xs sm:text-sm" dir={row.dir}>{row.value}</span>
                 </div>
               ))}
             </div>
@@ -147,8 +147,8 @@ export function BookingPage() {
 
           <button
             onClick={resetForm}
-            className="w-full py-3.5 rounded-md font-semibold text-sm tracking-wide transition-colors duration-200 cursor-pointer
-              border border-gold/30 text-gold hover:bg-gold/10 active:scale-[0.99]"
+            className="w-full py-2.5 sm:py-3.5 rounded-md font-semibold text-xs sm:text-sm tracking-wide transition-colors duration-200 cursor-pointer
+              border border-gold/30 text-gold hover:bg-gold/10 active:scale-[0.99] min-h-[40px] sm:min-h-[44px]"
             style={{ fontFamily: 'var(--font-body)', animation: 'booking-fade-up 0.35s cubic-bezier(0.16,1,0.3,1) 0.5s both' }}
           >
             קביעת תור נוסף
@@ -171,14 +171,14 @@ export function BookingPage() {
         style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '60px 60px' }}
       />
 
-      <div className="relative z-20 max-w-lg mx-auto px-5 pb-12">
+      <div className="relative z-20 max-w-lg mx-auto px-4 sm:px-5 pb-8 sm:pb-12">
 
         {/* ── Header ── */}
-        <header className="pt-12 pb-10 text-center booking-animate-in">
+        <header className="pt-8 sm:pt-12 pb-6 sm:pb-10 text-center booking-animate-in">
           {/* Gold scissors icon */}
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-gold/20 mb-5"
+          <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-gold/20 mb-3 sm:mb-5"
             style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%)' }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4af37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
               <circle cx="6" cy="6" r="3" />
               <circle cx="6" cy="18" r="3" />
               <line x1="20" y1="4" x2="8.12" y2="15.88" />
@@ -186,31 +186,31 @@ export function BookingPage() {
               <line x1="8.12" y1="8.12" x2="12" y2="12" />
             </svg>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight gold-shimmer-text mb-2"
+          <h1 className="text-2xl sm:text-4xl font-bold tracking-tight gold-shimmer-text mb-2"
             style={{ fontFamily: 'var(--font-display)', lineHeight: 1.2 }}>
             אלמוג ניסן
           </h1>
-          <div className="flex items-center justify-center gap-4 mt-3">
-            <span className="h-px w-10 bg-gold/20" />
-            <span className="text-white/30 text-xs tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-body)' }}>
+          <div className="flex items-center justify-center gap-2 sm:gap-4 mt-3">
+            <span className="h-px w-6 sm:w-10 bg-gold/20" />
+            <span className="text-white/30 text-[10px] sm:text-xs tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-body)' }}>
               BARBERSHOP
             </span>
-            <span className="h-px w-10 bg-gold/20" />
+            <span className="h-px w-6 sm:w-10 bg-gold/20" />
           </div>
         </header>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
 
           {/* ── Personal Info Section ── */}
           <section className="booking-animate-in" style={{ animationDelay: '0.1s' }}>
-            <div className="rounded-lg p-5 border border-white/[0.05]"
+            <div className="rounded-lg p-4 sm:p-5 border border-white/[0.05]"
               style={{ background: '#0a0a0a' }}>
-              <div className="flex items-center gap-2 mb-5">
+              <div className="flex items-center gap-2 mb-4 sm:mb-5">
                 <span className="w-0.5 h-5 bg-gold" />
-                <h2 className="text-white/90 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>פרטים אישיים</h2>
+                <h2 className="text-white/90 font-semibold text-xs sm:text-sm" style={{ fontFamily: 'var(--font-body)' }}>פרטים אישיים</h2>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div>
                   <input
                     type="text"
@@ -218,7 +218,7 @@ export function BookingPage() {
                     onChange={(e) => setForm({ ...form, customerName: e.target.value })}
                     placeholder="שם מלא"
                     autoFocus
-                    className="w-full bg-white/[0.03] border border-white/[0.07] rounded-md px-4 py-3 text-sm text-white
+                    className="w-full bg-white/[0.03] border border-white/[0.07] rounded-md px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-white
                       placeholder:text-white/20 focus:outline-none focus:border-gold/50 focus:bg-white/[0.05] transition-colors duration-200"
                     style={{ fontFamily: 'var(--font-body)' }}
                   />
@@ -231,7 +231,7 @@ export function BookingPage() {
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     placeholder="050-1234567"
-                    className="w-full bg-white/[0.03] border border-white/[0.07] rounded-md px-4 py-3 text-sm text-white text-left
+                    className="w-full bg-white/[0.03] border border-white/[0.07] rounded-md px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-white text-left
                       placeholder:text-white/20 focus:outline-none focus:border-gold/50 focus:bg-white/[0.05] transition-colors duration-200"
                     style={{ fontFamily: 'var(--font-body)' }}
                   />
@@ -243,14 +243,14 @@ export function BookingPage() {
 
           {/* ── Date Selection ── */}
           <section className="booking-animate-in" style={{ animationDelay: '0.2s' }}>
-            <div className="rounded-lg p-5 border border-white/[0.05]"
+            <div className="rounded-lg p-4 sm:p-5 border border-white/[0.05]"
               style={{ background: '#0a0a0a' }}>
-              <div className="flex items-center gap-2 mb-5">
+              <div className="flex items-center gap-2 mb-4 sm:mb-5">
                 <span className="w-0.5 h-5 bg-gold" />
-                <h2 className="text-white/90 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>בחר תאריך</h2>
+                <h2 className="text-white/90 font-semibold text-xs sm:text-sm" style={{ fontFamily: 'var(--font-body)' }}>בחר תאריך</h2>
               </div>
 
-              <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1"
+              <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 -mx-2 px-2"
                 style={{ scrollbarWidth: 'none' }}>
                 {dateOptions.map((d) => {
                   const iso = formatDateISO(d);
@@ -261,26 +261,26 @@ export function BookingPage() {
                       key={iso}
                       type="button"
                       onClick={() => setForm({ ...form, date: iso, startTime: '' })}
-                      className={`flex-shrink-0 flex flex-col items-center py-2.5 px-3 rounded-lg border transition-colors duration-200 cursor-pointer min-w-[62px] ${
+                      className={`flex-shrink-0 flex flex-col items-center py-2 sm:py-2.5 px-2.5 sm:px-3 rounded-lg border transition-colors duration-200 cursor-pointer min-w-[56px] sm:min-w-[62px] ${
                         isSelected
                           ? 'border-gold/50 bg-gold/10'
                           : 'border-white/[0.05] bg-white/[0.02] hover:border-white/[0.1] hover:bg-white/[0.03]'
                       }`}
                     >
-                      <span className={`text-[10px] font-medium mb-0.5 ${isSelected ? 'text-gold' : 'text-white/30'}`}
+                      <span className={`text-[9px] sm:text-[10px] font-medium mb-0.5 ${isSelected ? 'text-gold' : 'text-white/30'}`}
                         style={{ fontFamily: 'var(--font-body)' }}>
                         {hebrewDayShort(d)}
                       </span>
-                      <span className={`text-lg font-bold ${isSelected ? 'text-gold' : 'text-white/70'}`}
+                      <span className={`text-base sm:text-lg font-bold ${isSelected ? 'text-gold' : 'text-white/70'}`}
                         style={{ fontFamily: 'var(--font-display)' }}>
                         {d.getDate()}
                       </span>
-                      <span className={`text-[10px] ${isSelected ? 'text-gold/60' : 'text-white/20'}`}
+                      <span className={`text-[9px] sm:text-[10px] ${isSelected ? 'text-gold/60' : 'text-white/20'}`}
                         style={{ fontFamily: 'var(--font-body)' }}>
                         {d.getMonth() + 1}/{String(d.getFullYear()).slice(2)}
                       </span>
                       {isToday && (
-                        <span className={`mt-1 w-1 h-1 rounded-full ${isSelected ? 'bg-gold' : 'bg-white/30'}`} />
+                        <span className={`mt-0.5 w-1 h-1 rounded-full ${isSelected ? 'bg-gold' : 'bg-white/30'}`} />
                       )}
                     </button>
                   );
@@ -292,11 +292,11 @@ export function BookingPage() {
 
           {/* ── Time Slot Selection ── */}
           <section className="booking-animate-in" style={{ animationDelay: '0.3s' }}>
-            <div className="rounded-lg p-5 border border-white/[0.05]"
+            <div className="rounded-lg p-4 sm:p-5 border border-white/[0.05]"
               style={{ background: '#0a0a0a' }}>
-              <div className="flex items-center gap-2 mb-5">
+              <div className="flex items-center gap-2 mb-4 sm:mb-5">
                 <span className="w-0.5 h-5 bg-gold" />
-                <h2 className="text-white/90 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>בחר שעה</h2>
+                <h2 className="text-white/90 font-semibold text-xs sm:text-sm" style={{ fontFamily: 'var(--font-body)' }}>בחר שעה</h2>
               </div>
 
               {slotsLoading ? (
@@ -314,7 +314,7 @@ export function BookingPage() {
                   <p className="text-white/15 text-xs mt-1" style={{ fontFamily: 'var(--font-body)' }}>נסה תאריך אחר</p>
                 </div>
               ) : (
-                <div className="grid grid-cols-4 gap-2 max-h-52 overflow-y-auto pr-1"
+                <div className="grid grid-cols-3 sm:grid-cols-4 gap-1.5 sm:gap-2 max-h-52 overflow-y-auto pr-1"
                   style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(201,168,76,0.2) transparent' }}>
                   {availableSlots.map((slot) => {
                     const isSelected = form.startTime === slot;
@@ -323,7 +323,7 @@ export function BookingPage() {
                         key={slot}
                         type="button"
                         onClick={() => setForm({ ...form, startTime: slot })}
-                        className={`relative py-2.5 px-1 text-sm rounded-md border transition-colors duration-200 cursor-pointer font-medium ${
+                        className={`relative py-2 sm:py-2.5 px-1 text-xs sm:text-sm rounded-md border transition-colors duration-200 cursor-pointer font-medium min-h-[40px] flex items-center justify-center ${
                           isSelected
                             ? 'border-gold/50 bg-gold/15 text-gold'
                             : 'border-white/[0.05] bg-white/[0.02] text-white/50 hover:border-white/[0.1] hover:text-white/70 hover:bg-white/[0.03]'
@@ -332,7 +332,7 @@ export function BookingPage() {
                       >
                         {slot}
                         {isSelected && (
-                          <Check className="absolute top-1 left-1 w-3 h-3 text-gold" />
+                          <Check className="absolute top-0.5 left-0.5 w-3 h-3 text-gold" />
                         )}
                       </button>
                     );
@@ -348,7 +348,7 @@ export function BookingPage() {
             <button
               type="button"
               onClick={() => setShowNotes(!showNotes)}
-              className="flex items-center gap-2 text-white/25 hover:text-white/40 transition-colors text-sm cursor-pointer"
+              className="flex items-center gap-2 text-white/25 hover:text-white/40 transition-colors text-xs sm:text-sm cursor-pointer"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showNotes ? 'rotate-180' : ''}`} />
@@ -361,7 +361,7 @@ export function BookingPage() {
                   onChange={(e) => setForm({ ...form, notes: e.target.value })}
                   placeholder="תספורת, עיצוב זקן, הערות נוספות..."
                   rows={3}
-                  className="w-full bg-white/[0.03] border border-white/[0.07] rounded-md px-4 py-3 text-sm text-white
+                  className="w-full bg-white/[0.03] border border-white/[0.07] rounded-md px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-white
                     placeholder:text-white/20 focus:outline-none focus:border-gold/50 focus:bg-white/[0.05]
                     transition-colors duration-200 resize-none"
                   style={{ fontFamily: 'var(--font-body)' }}
@@ -373,7 +373,7 @@ export function BookingPage() {
           {/* ── Error message ── */}
           {errors.form && (
             <div className="booking-animate-in rounded-md p-3 border border-red-500/20 bg-red-500/10">
-              <p className="text-sm text-red-400" style={{ fontFamily: 'var(--font-body)' }}>{errors.form}</p>
+              <p className="text-xs sm:text-sm text-red-400" style={{ fontFamily: 'var(--font-body)' }}>{errors.form}</p>
             </div>
           )}
 
@@ -382,8 +382,8 @@ export function BookingPage() {
             <button
               type="submit"
               disabled={bookMutation.isPending}
-              className="group relative w-full py-4 rounded-md font-bold text-sm tracking-wide overflow-hidden cursor-pointer
-                disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 active:scale-[0.99]"
+              className="group relative w-full py-3 sm:py-4 rounded-md font-bold text-xs sm:text-sm tracking-wide overflow-hidden cursor-pointer
+                disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 active:scale-[0.99] min-h-[44px] sm:min-h-[48px]"
               style={{
                 fontFamily: 'var(--font-body)',
                 background: 'linear-gradient(135deg, #d4af37 0%, #b8952e 50%, #d4af37 100%)',
