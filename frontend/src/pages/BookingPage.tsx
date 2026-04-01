@@ -101,7 +101,7 @@ export function BookingPage() {
   if (step === 'success') {
     return (
     <div className="min-h-screen flex items-center justify-center p-4"
-        style={{ background: '#030303' }}>
+        style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%)' }}>
         <div className="booking-scale-in max-w-md w-full text-center">
           {/* Animated check circle */}
           <div className="mx-auto mb-6 sm:mb-8 w-16 sm:w-20 h-16 sm:h-20 rounded-full border-2 border-gold/40 flex items-center justify-center"
@@ -125,9 +125,9 @@ export function BookingPage() {
           <p className="text-white/40 text-xs sm:text-sm mb-6 sm:mb-8" style={{ fontFamily: 'var(--font-body)' }}>מחכים לך</p>
 
           {/* Appointment card */}
-          <div className="rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 text-right border border-gold/10"
+          <div className="rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 text-right border border-gold/20 backdrop-blur-sm"
             style={{
-              background: '#0a0a0a',
+              background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)',
               animation: 'booking-fade-up 0.35s cubic-bezier(0.16,1,0.3,1) 0.3s both',
             }}>
             <div className="space-y-2 sm:space-y-3" style={{ fontFamily: 'var(--font-body)' }}>
@@ -161,7 +161,7 @@ export function BookingPage() {
   /* ───── BOOKING FORM ───── */
   return (
     <div className="min-h-screen relative overflow-hidden"
-      style={{ background: '#030303' }}>
+      style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%)' }}>
 
       {/* Background texture */}
       <BarberStripe className="top-0 left-0 w-full h-full text-gold" />
@@ -203,8 +203,8 @@ export function BookingPage() {
 
           {/* ── Personal Info Section ── */}
           <section className="booking-animate-in" style={{ animationDelay: '0.1s' }}>
-            <div className="rounded-lg p-4 sm:p-5 border border-white/[0.05]"
-              style={{ background: '#0a0a0a' }}>
+            <div className="rounded-lg p-4 sm:p-5 border border-gold/10 backdrop-blur-sm"
+              style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
               <div className="flex items-center gap-2 mb-4 sm:mb-5">
                 <span className="w-0.5 h-5 bg-gold" />
                 <h2 className="text-white/90 font-semibold text-xs sm:text-sm" style={{ fontFamily: 'var(--font-body)' }}>פרטים אישיים</h2>
@@ -243,8 +243,8 @@ export function BookingPage() {
 
           {/* ── Date Selection ── */}
           <section className="booking-animate-in" style={{ animationDelay: '0.2s' }}>
-            <div className="rounded-lg p-4 sm:p-5 border border-white/[0.05]"
-              style={{ background: '#0a0a0a' }}>
+            <div className="rounded-lg p-4 sm:p-5 border border-gold/10 backdrop-blur-sm"
+              style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
               <div className="flex items-center gap-2 mb-4 sm:mb-5">
                 <span className="w-0.5 h-5 bg-gold" />
                 <h2 className="text-white/90 font-semibold text-xs sm:text-sm" style={{ fontFamily: 'var(--font-body)' }}>בחר תאריך</h2>
@@ -292,8 +292,8 @@ export function BookingPage() {
 
           {/* ── Time Slot Selection ── */}
           <section className="booking-animate-in" style={{ animationDelay: '0.3s' }}>
-            <div className="rounded-lg p-4 sm:p-5 border border-white/[0.05]"
-              style={{ background: '#0a0a0a' }}>
+            <div className="rounded-lg p-4 sm:p-5 border border-gold/10 backdrop-blur-sm"
+              style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
               <div className="flex items-center gap-2 mb-4 sm:mb-5">
                 <span className="w-0.5 h-5 bg-gold" />
                 <h2 className="text-white/90 font-semibold text-xs sm:text-sm" style={{ fontFamily: 'var(--font-body)' }}>בחר שעה</h2>
