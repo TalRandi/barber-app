@@ -80,7 +80,7 @@ export function SettingsPage() {
             <span className="w-0.5 h-5 bg-gold" />
             <h3 className="text-white/80 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>שעות פעילות</h3>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
             <div>
               <label className="block text-xs text-white/40 mb-1.5" style={{ fontFamily: 'var(--font-body)' }}>שעת פתיחה</label>
               <input type="time" value={form.openTime} onChange={(e) => setForm({ ...form, openTime: e.target.value })}
@@ -140,7 +140,7 @@ export function SettingsPage() {
             <span className="w-0.5 h-5 bg-gold" />
             <h3 className="text-white/80 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>הפסקה</h3>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
             <div>
               <label className="block text-xs text-white/40 mb-1.5" style={{ fontFamily: 'var(--font-body)' }}>תחילת הפסקה</label>
               <input type="time" value={form.breakStartTime} onChange={(e) => setForm({ ...form, breakStartTime: e.target.value })}
