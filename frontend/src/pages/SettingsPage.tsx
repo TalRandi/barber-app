@@ -69,7 +69,7 @@ export function SettingsPage() {
   const inputClass = "w-full bg-white/[0.03] border border-white/[0.07] rounded-md px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold/50 focus:bg-white/[0.05] transition-colors duration-200";
 
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl max-w-full mx-4">
       <h2 className="text-xl font-bold text-white/90 mb-6" style={{ fontFamily: 'var(--font-display)' }}>הגדרות עסק</h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
