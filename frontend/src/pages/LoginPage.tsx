@@ -27,7 +27,7 @@ export function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4"
-      style={{ background: '#030303' }}>
+      style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%)' }}>
 
       {/* Subtle grid texture */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.02] z-0"
@@ -52,8 +52,8 @@ export function LoginPage() {
         </div>
 
         {/* Form card */}
-        <div className="rounded-lg p-6 border border-white/[0.05]"
-          style={{ background: '#0a0a0a' }}>
+        <div className="rounded-lg p-6 border border-gold/10 backdrop-blur-sm"
+          style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <div className="relative">

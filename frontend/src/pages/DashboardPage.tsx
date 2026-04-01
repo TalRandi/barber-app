@@ -183,7 +183,7 @@ export function DashboardPage() {
             <div className="w-5 h-5 border-2 border-gold/20 border-t-gold rounded-full animate-spin" />
           </div>
         ) : getAppointmentsForDate(selectedDate).length === 0 ? (
-          <div className="text-center py-12 rounded-lg border border-dashed border-white/[0.06] bg-white/[0.01]">
+          <div className="text-center py-12 rounded-lg border border-dashed border-gold/20 bg-white/[0.01]">
             <p className="text-white/25 mb-4" style={{ fontFamily: 'var(--font-body)' }}>אין תורים ליום זה</p>
             <button onClick={openCreate}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium border border-gold/30 text-gold hover:bg-gold/10 transition-colors cursor-pointer"

@@ -74,8 +74,8 @@ export function SettingsPage() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Working hours */}
-        <div className="rounded-lg p-5 border border-white/[0.05]"
-          style={{ background: '#0a0a0a' }}>
+        <div className="rounded-lg p-5 border border-gold/10 backdrop-blur-sm"
+          style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
           <div className="flex items-center gap-2 mb-5">
             <span className="w-0.5 h-5 bg-gold" />
             <h3 className="text-white/80 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>שעות פעילות</h3>
@@ -95,8 +95,8 @@ export function SettingsPage() {
         </div>
 
         {/* Slot duration */}
-        <div className="rounded-lg p-5 border border-white/[0.05]"
-          style={{ background: '#0a0a0a' }}>
+        <div className="rounded-lg p-5 border border-gold/10 backdrop-blur-sm"
+          style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
           <div className="flex items-center gap-2 mb-5">
             <span className="w-0.5 h-5 bg-gold" />
             <h3 className="text-white/80 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>משך תור (דקות)</h3>
@@ -112,8 +112,8 @@ export function SettingsPage() {
         </div>
 
         {/* Working days */}
-        <div className="rounded-lg p-5 border border-white/[0.05]"
-          style={{ background: '#0a0a0a' }}>
+        <div className="rounded-lg p-5 border border-gold/10 backdrop-blur-sm"
+          style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
           <div className="flex items-center gap-2 mb-5">
             <span className="w-0.5 h-5 bg-gold" />
             <h3 className="text-white/80 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>ימי עבודה</h3>
@@ -134,8 +134,8 @@ export function SettingsPage() {
         </div>
 
         {/* Break time */}
-        <div className="rounded-lg p-5 border border-white/[0.05]"
-          style={{ background: '#0a0a0a' }}>
+        <div className="rounded-lg p-5 border border-gold/10 backdrop-blur-sm"
+          style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.6) 100%)' }}>
           <div className="flex items-center gap-2 mb-5">
             <span className="w-0.5 h-5 bg-gold" />
             <h3 className="text-white/80 font-semibold text-sm" style={{ fontFamily: 'var(--font-body)' }}>הפסקה</h3>

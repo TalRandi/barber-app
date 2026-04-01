@@ -34,8 +34,8 @@ export function AppointmentCard({ appointment, onEdit, onDelete }: Props) {
 
   return (
     <div
-      className={`rounded-lg border p-4 transition-colors duration-200 hover:border-white/[0.1] ${
-        isPast ? 'opacity-50 border-white/[0.04] bg-white/[0.01]' : 'border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04]'
+      className={`rounded-lg border p-4 transition-colors duration-200 hover:border-gold/20 ${
+        isPast ? 'opacity-50 border-gold/10 bg-white/[0.01]' : 'border-gold/10 bg-white/[0.02] hover:bg-white/[0.04]'
       } ${isCancelled ? 'opacity-40' : ''}`}
     >
       <div className="flex items-start justify-between mb-3">

@@ -12,9 +12,9 @@ export function AppLayout() {
   };
 
   return (
-    <div className="min-h-screen" style={{ background: '#030303' }}>
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%)' }}>
       {/* Top navbar */}
-      <header className="border-b border-white/[0.05]" style={{ background: 'rgba(5,5,5,0.95)' }}>
+      <header className="border-b border-gold/10 backdrop-blur-md" style={{ background: 'linear-gradient(135deg, rgba(15,15,15,0.85) 0%, rgba(20,20,20,0.75) 100%)' }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -39,7 +39,7 @@ export function AppLayout() {
       </header>
 
       {/* Navigation tabs */}
-      <nav className="border-b border-white/[0.04]" style={{ background: 'rgba(8,8,8,0.9)' }}>
+      <nav className="border-b border-gold/10 backdrop-blur-sm" style={{ background: 'linear-gradient(135deg, rgba(15,15,15,0.8) 0%, rgba(20,20,20,0.7) 100%)' }}>
         <div className="max-w-6xl mx-auto px-4 flex gap-1">
           <NavLink
             to="/"
